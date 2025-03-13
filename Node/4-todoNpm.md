@@ -13,5 +13,16 @@
 # Ajouter un script pour lancer facilement le server  : 
   "scripts": {
     `"dev": "node --watch app.js"` ==> `app.js` représente le nom du fichier du server à lancer
-    "start": "node app.js"
+    ...
   },
+  Se lance avec la cmd : `npm run dev`
+
+# ajouter un fichier gitignore
+.gitignore et y mentionner `/node_modules`
+
+# importer autre chose qu'un module
+En général, il faut ajouter `.js` à la fin de l'import. Exemple avec le plugin de dayjs : 
+`import advancedFormat from 'dayjs/plugin/advancedFormat.js'`
+
+Note challenge
+route dynamique à faire par rapport aux noms de capitales : probablement par une recherche de nom de capitale, via une recherche native dans JS
