@@ -156,3 +156,30 @@ console.log(friends); // (2) ['Cédric', 'Marie']
 
 Analogie :
 > un tableau avec const, c'est comme un mur et tu peux le repeindre ou rajouter des briques mais pas le detruire et le remplacer
+ 
+### accéder à une valeur dans un tableau contenant plusieurs objets
+
+Le tableau : 
+
+```js
+const gamesData = [
+  {
+    "name": "fourchette",
+    "title": "Jeu de la fourchette",
+    "cssFile": null,
+    "jsFile": "fourchette.js"
+  },
+  {
+    "name": "diceRoller",
+    "title": "Dice Roller",
+    "cssFile": "diceRoller.css",
+    "jsFile": "diceRoller.js"
+  }
+];
+```
+le code pour accéder à la valeur `cssFile`: 
+```js
+    const game = gamesData[0]; // j'accède à l'index de mon tableau qui m'intéresse
+    console.log(game.cssFile); // j'appelle la valeur de la clef qui m'intéresse
+    const game = gamesData[0].cssFile // la même chose en une seule ligne
+```

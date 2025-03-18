@@ -194,6 +194,8 @@ for (let currentUser of users) {
 }
 ```
 
+
+
 On crée une variable qu'on nomme currentUser (on pourrait aussi l'appeler _user_ mais attention avec 2 variables qu ont juste une lettre différente dans leur nom), cette variable sera remplie successivement avec chaque élément du tableau 
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
@@ -261,6 +263,12 @@ friends.forEach(printHello);
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
+```js
+        capitalCities.forEach(city => {
+            <li><a href="/city/<%= city.name.toLowerCase() %>"><%= city.name %></a></li>})
+  ```
+
+Ici, pour l'objet <%capitalcities%>, on définit une constante <%city%> qui permet d'appeler <%.name%> dans capital cities
 
 ## Les boucles infinies
 
