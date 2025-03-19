@@ -5,7 +5,7 @@ Exemple :
 app.get("/game/:nomDuJeu", (req,res) => {
     let writtenName = req.params.nomDuJeu // Récupère le nom du jeu indiqué dans la barre de recherche
     let gameName = gamesData.find((element) => element.name === writtenName) // cherche le nom du jeu dans le tableau gamesData et le compare à writtenName
-    let gameIndex = gamesData.findIndex((element) => element.name === writtenName)} // cherche le nom du jeu dans le tableau gamesData et renvoie son index
+    let gameIndex = gamesData.findIndex((element) => element.name === writtenName)}) // cherche le nom du jeu dans le tableau gamesData et renvoie son index
     
 ```
 ## forEach
@@ -31,7 +31,7 @@ export const capitalCities = [
 ### fonction fléchée
 
 ```js
-const randomValueFromArray = (array) => { // Récupère une valeur aléatoire pour le tableau dont le nom remplacera la variable array
+const randomValueFromArray = (array) => { // Récupère une valeur aléatoire pour un tableau. Remplacer array par le nom du tableau auqeul on veut appliquer la fonction
     return array[Math.floor(Math.random() * array.length)]}
 ```
 
@@ -46,4 +46,22 @@ const hellos = [ // le tableau
     "Olá", // Portugais
 ];
 
-${randomValueFromArray(hellos)}// la fonction appliqué au tableau
+${randomValueFromArray(hellos)}// la fonction appliquée au tableau
+```
+
+#### Truthy
+
+```js
+    <% if (game.cssFile) { %>//je vérifie si game.cssFile est truthy. Détail : si game est null, alors il est Falsy, si game a une valeur, alors il est Truthy
+            <link rel="stylesheet" href="/css/<%=game.cssFile %>">
+    <% } %>
+```
+
+##### typeof
+```js
+typeof !== undefined // nous permet de prévenir javascript qu'on sait que potentiellement elle n'existe pas et de ne pas déclencher d'erreur dans ce cas
+ if (typeof game !== "undefined" && game.cssFile) {// est-ce que j'ai un jeu (game) et si il est truthy (game.cssFile), alors j'affiche le résultat du if, 
+ // sinon le if ne se déclenche pas
+        <link rel="stylesheet" href="/css/<%=game.cssFile %>">}
+```
+
