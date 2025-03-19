@@ -15,6 +15,7 @@ npm install // (installe toutes les dépendances du projet)
 # àjouter 
 
 ```js
+"main": "index.js",
 "type": "module" // dans le fichier json :
 ```
 

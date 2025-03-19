@@ -1,7 +1,6 @@
 # Explication
 
 
-
 ## Usage
 
 Les middleware peuvent être rangés dans un dossier Middleware et appelés comme des fonctions rangées dans des modules: 
@@ -38,3 +37,31 @@ la variable ainsi envoyée n'est plus disponible simplement en l'appelant :
  games // à changer par : 
  
  ```
+ ##### middleware de type logger
+
+```js
+import morgan from "morgan";
+// les middlewares peuvent être aussi des modules npm tiers comme morgan qui est un logger
+app.use(morgan('combined'))
+// donne plein d'infos issues de la requete comme un console.log
+```
+
+###### Construire un middleware
+
+1- Créer un fichier nomDuMiddleware.js et le loger dans le dossier Middlewares
+2- Créer et exporter une fonction dans ce fichier
+3- Importer la fonction dans l'index
+4- Utiliser la fonction dans l'index
+
+```js
+// dans le dossier middleware
+export const getVerb =(req, res,next) =>{
+    console.log(`le verbe http de la requête est ${req.method}`)
+    next()
+}
+// dans l'index qui utilise cet middelware
+import { getVerb } from "./middlewares/getVerb.js";
+app.use(getVerb)
+// résultat dans la console : 
+le verbe http de la requête est GET
+```

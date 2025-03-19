@@ -11,9 +11,17 @@ app.set("view engine", "ejs"); // On choisit notre view engine // (c'est là ded
 
  - Pour utiliser ejs dans une page dynamique (`app.get`)utiliser `res.render`
  - Ensuite, on indique la page vers laquelle on renvoit  `res.render ("home")`
- - POur enovyer de la data dans cette page, on ajoute un objet en deuxième argument de la fonction <%-res.render ("home", {variable, fonction(), objet[]...})%>
- - La data renvoyée est utilisable dans la nouvelle page (ici `"home"`)
-- Exemple : <%-res.render("city", { cityObject, cityTime: getCityTime(cityObject) })%> qui renvoit à la page `city`, avec la variable `cityObject` et la variable `cityTime` qui est le résultat de `getCityTime(cityObject)`
+ - POur enovyer de la data dans cette page, on ajoute un objet en deuxième argument de la fonction
+```js
+res.render ("home", {variable, fonction(), objet[]...})
+```
+
+La data renvoyée est utilisable dans la nouvelle page (ici `"home"`)
+Exemple : 
+```js
+res.render("city", { cityObject, cityTime: getCityTime(cityObject) })
+```
+ qui renvoit à la page `city`, avec la variable `cityObject` et la variable `cityTime` qui est le résultat de `getCityTime(cityObject)`
 
 ### Views
 
@@ -32,5 +40,13 @@ app.set("views", "./views");
 
 ##### Static
 
-- Pour appliquer un fichier css, on doit le placer dans un dossier `public`et le déclarer ainsi dans le fichier ejs: <%- app.use(express.static("public")) %>
-- dans le fichier html, la déclaration doit se faire ainsi : <link rel="stylesheet" href="/style.css"> ==> mettre le chemin en prenant comme point de départ le fichier public
+- Pour appliquer un fichier css, on doit le placer dans un dossier `public`et le déclarer ainsi dans le fichier ejs: 
+```js
+app.use(express.static("public"))
+```
+
+dans le fichier html, la déclaration doit se faire ainsi : 
+
+```html
+<link rel="stylesheet" href="/style.css"> <!-- mettre le chemin en prenant comme point de départ le fichier public>
+```
