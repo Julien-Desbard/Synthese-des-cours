@@ -1,6 +1,6 @@
 # le principe
 
-En cas d'erreur dans un middleware, on peut réorienter le fluw directement vers un lmiddleware spécialisé dans le traitement des erreurs
+En cas d'erreur dans un middleware, on peut réorienter le fluw directement vers un middleware spécialisé dans le traitement des erreurs
 
 ## Fonctionnement
 

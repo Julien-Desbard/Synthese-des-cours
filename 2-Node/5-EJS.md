@@ -32,7 +32,7 @@ res.render("city", { cityObject, cityTime: getCityTime(cityObject) })
 app.set("views", "./views");
 ```
 
-#### Parials
+#### Partials
 
 - Pour éviter de répéter des bouts d'html sur chaque views, on peut créer des `Partials` qui sont en fait des morceaux récurrents du code html de ces pages.
 - On y retrouve souvent les header et footer et on les déclare ainsi dans le fichier views : <%- include('partials/header.ejs', {title: "Bienvenue"}) %>

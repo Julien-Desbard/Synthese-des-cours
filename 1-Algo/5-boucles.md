@@ -45,7 +45,7 @@ while (isFound === false) {
 // Bien vérifier que la condition va devenir non valide à un moment par rapport aux instructions dans le while, sinon boucle infinie
 ```
 
-### Un deuxième exemple de boucle while
+#### Un deuxième exemple de boucle while
 
 Objectif : écrire 5 fois "Je réfléchirai avant d'écrire du code"
 

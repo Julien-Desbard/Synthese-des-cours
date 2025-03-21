@@ -1,4 +1,4 @@
-# Find dans un tableau
+# array.find
 
 Exemple : 
 ```js
@@ -13,6 +13,13 @@ app.get("/game/:nomDuJeu", (req,res) => {
 ```js
 capitalCities.forEach(city => { %> //pour chaque élément du tableau capitalCities, dont les valeurs sont provisoirement logéés dans la variable city...
             <li><a href="/city/<%= city.name.toLowerCase() %>"><%= city.name %></a></li>})// crée un <li> et un <a>> avec le nom contenu dans chaque objet du tableau
+```
+```html
+<ul>
+    <% movies.forEach((movie, index) => { %> <!-- Ici j'utilise la variable index pour obtenir l'index pour chaque element du tableau-->
+        <li><a href="/films/<%= index %>"><%= movie.title %></a></li>
+    <% }) %>
+</ul>
 ```
 
 Le tableau en question : 
@@ -49,12 +56,12 @@ const hellos = [ // le tableau
 ${randomValueFromArray(hellos)}// la fonction appliquée au tableau
 ```
 
-#### Truthy
+#### Truthy / falsy
 
 ```js
-    <% if (game.cssFile) { %>//je vérifie si game.cssFile est truthy. Détail : si game est null, alors il est Falsy, si game a une valeur, alors il est Truthy
+    <% if (game.cssFile) { }%>//je vérifie si game.cssFile est TRUTHYy. Détail : si game est null, alors il est Falsy, si game a une valeur, alors il est Truthy
+    <% if (!game.cssFile) { }%> //je vérifie si game.cssFile est FALSY. Détail : si game est null, alors il est Falsy, si game a une valeur, alors il est Truthy
             <link rel="stylesheet" href="/css/<%=game.cssFile %>">
-    <% } %>
 ```
 
 ##### typeof
