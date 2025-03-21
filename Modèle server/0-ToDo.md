@@ -15,7 +15,7 @@ npm install ejs express
 "main": "index.js",// dans le prmeier paquet
 "type": "module", // dans le fichier json :
 "scripts": { //dans les scripts
-"dev": "node --watch index.js", //==> app.js  représente le nom du fichier du server à lancer
+"dev": "node --watch index.js" //==> app.js  représente le nom du fichier du server à lancer
 }
 ```
 Se lance avec la cmd : `npm run dev`
