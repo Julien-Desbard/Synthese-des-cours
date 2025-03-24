@@ -7,7 +7,7 @@ npm init -y
 
 ```js
 npm install // (installe toutes les dépendances du projet)
-npm install ejs express
+npm install ejs express dotenv
 ```
 ### àjouter dans le json 
 
@@ -23,6 +23,7 @@ Se lance avec la cmd : `npm run dev`
 Fichier .gitignore et y mentionner :
 ```js
 /node_modules
+.env
 ```
 #### Router
 
@@ -43,9 +44,17 @@ En général, il faut ajouter `.js` à la fin de l'import. Exemple avec le plugi
 ```js
 import advancedFormat from 'dayjs/plugin/advancedFormat.js'
 ```
+
+
+POur importer un tableau sous format json, ajouter la partie `type : json` à la fin : 
+```js
+import articles from "../../data/articles.json" with {type:'json'}
+```
+
 ###### Structure des fichiers : 
 - App
   - middleware
+  - controllers
   - routers
     - router.js
   - views
