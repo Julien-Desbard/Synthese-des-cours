@@ -6,12 +6,13 @@ html{
   --color-salte gray : #8a9892;
   --color-off-white : 	#f2f0ef;*/
   --color-text : #cc5500; /* Burnt orange*/
-  --color-bg : 	#d6caca;/*pale gray*/
+  --color-bg : 	#c7b8a7;/*light gray*/
   }
   
   #grad {
     background-color: var(--color-bg)
   }
+
   a nav {
     text-decoration: none;
     padding : 0.2rem;
