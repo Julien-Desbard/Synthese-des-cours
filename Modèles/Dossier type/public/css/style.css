@@ -1,76 +1,81 @@
-.boldonse-regular {
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-#grad {
-  background-image: linear-gradient(to right,#69D3D0, #9DE1a4, #e3f755);
-
-  a {
-    text-decoration: none;
-    color : #000080
+html{
+  /*--color-teal : teal;
+  --color-creamyWhite : #f0e9d6;
+  --color-dark green : #314F40;
+  --color-light peach : 	#FED1BC;
+  --color-salte gray : #8a9892;
+  --color-off-white : 	#f2f0ef;*/
+  --color-text : #cc5500; /* Burnt orange*/
+  --color-bg : 	#d6caca;/*pale gray*/
   }
-}
-
-/* Styles généraux */
-body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
   
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-nav {
-  padding : 2rem
-}
-
-/* Typographie */
-h1, h2, h3 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color : #000080
-}
-
-body {
-  color : #000080
-}
+  #grad {
+    background-color: var(--color-bg)
+  }
+  a nav {
+    text-decoration: none;
+    padding : 0.2rem;
+    color : var(--color-teal);
+  }
   
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* Liens */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Listes */
-ul, ol {
-  margin-bottom: 1rem;
-}
-
-li {
-  margin-left: 1.5rem;
-}
+  /* Styles généraux */
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  nav {
+    padding : 2rem
+  }
+  
+  /* Typographie */
+  h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color : var(--color-text);
+  }
+  
+  body {
+    color : var(--color-text);
+  }
+    
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Liens */
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Listes */
+  ul, ol {
+    margin-bottom: 1rem;
+  }
+  
+  li {
+    margin-left: 1.5rem;
+  }
