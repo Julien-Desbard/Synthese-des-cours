@@ -10,7 +10,8 @@ html{
   }
   
   #grad {
-    background-color: var(--color-bg)
+    /*background-color: var(--color-bg);*/
+    background-image: linear-gradient(to right,#c7ad8f, #c7bbad, #c7ad8f);
   }
 
   a nav {
@@ -23,19 +24,12 @@ html{
   body {
     font-family: sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    
   }
   
   .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  nav {
-    padding : 2rem
   }
   
   /* Typographie */
@@ -50,6 +44,11 @@ html{
     color : var(--color-text);
   }
     
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
   h2 {
     font-size: 2rem;
   }

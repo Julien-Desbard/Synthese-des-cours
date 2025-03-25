@@ -7,7 +7,7 @@ npm init -y
 
 ```js
 npm install // (installe toutes les dépendances du projet)
-npm install ejs express dotenv
+npm install ejs express dotenv pg
 ```
 ### àjouter dans le json 
 
