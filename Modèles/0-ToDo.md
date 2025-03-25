@@ -25,7 +25,14 @@ Fichier .gitignore et y mentionner :
 /node_modules
 .env
 ```
-#### Router
+#### Fichier ENV - info de la BDD
+```js
+PORT=3000
+PGUSER=julien
+PGPASSWORD=Faitchier
+PGDATABASE=tiramisu_trombinoclock
+```
+##### Router
 
 Créer dossier routers et dedans un fichier router.js contenant de base : 
 ```js
@@ -39,7 +46,7 @@ Ajouter dans le fichier index.js l'usage de router :
 app.use(router);
 ```
 
-##### importer autre chose qu'un module
+###### importer autre chose qu'un module
 En général, il faut ajouter `.js` à la fin de l'import. Exemple avec le plugin de dayjs : 
 ```js
 import advancedFormat from 'dayjs/plugin/advancedFormat.js'
