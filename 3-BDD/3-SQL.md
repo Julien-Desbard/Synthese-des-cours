@@ -6,7 +6,7 @@
 - Pour donner les droits admin à un user sur tous le serveur : `ALTER USER name WITH SUPERUSER;`;
 - Pour créer une BDD et donner les droits à un user spécifique :  `CREATE DATABASE tiramisu_trombinoclock OWNER julien;`
 - Pour lister les bdd : `\l`
-- Pour se connecter à une bdd : `\c nom_db;`
+- Pour se connecter à une bdd : `\c tiramisu_trombinoclock;`
 - Pour importer un script : `\i /chemin/vers/fichier.sql`
 
 ## Selections basiques
@@ -16,7 +16,7 @@ récupérer un élément dans la BDD :
 SELECT last_name FROM students;
 ```
 
-récupérer tout une BDD : 
+récupérer toute une BDD : 
 ```SQL
 SELECT * FROM students;
 ```

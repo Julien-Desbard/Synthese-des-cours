@@ -2,6 +2,8 @@ import 'dotenv/config'
 import path from "node:path";
 import express from "express";
 import { router } from "./app/routers/router.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 //const port = 3001; remplacé par l'installation de dotenv
