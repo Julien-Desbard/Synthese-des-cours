@@ -60,7 +60,7 @@ Nous sommes actuellements dans une architecture MVC donc la méthodo pour créer
 
 # E02 - SQL
 
-## les commandes | Basics
+##  les commandes | Basics
 
 - 1 - Pour se connecter à postgresql via le terminal : `psql -U postgres` mot de passe : (js4life)
 - Pour créer un nouvel utilisateur : `CREATE USER nom_utilisateur WITH LOGIN PASSWORD 'mot_de_passe';`;
@@ -76,30 +76,39 @@ Nous sommes actuellements dans une architecture MVC donc la méthodo pour créer
 ## SELECTION | Basics
 
 Récupérer tous les elements d'une table :
+
 ```sql
 SELECT * FROM students;
 ```
+
 Récupérer un élément spécifique :
+
 ```sql
 SELECT code_postal FROM city;
 ```
+
 Récupérer plusieurs éléments spécifiques:
+
 ```sql
 SELECT last_name, first_name FROM students;
 ```
 
 ## SELECTION | WHERE
 
-Pour faire une recherche sur une condition spécifique 
+Pour faire une recherche sur une condition spécifique
+
 ```sql
 SELECT * FROM promos where name = 'tiramisu';
 ```
 
 ## SELECTION | condition
+
 Comme pour les langages de programmations il est possible de rendre nos conditions plus précises ou plus large avec "AND" "OR"
+
 ```sql
 SELECT * FROM promos where name = 'tiramisu' OR name = "Papaye";
 ```
+
 ```sql
 SELECT * FROM promos where name = 'tiramisu' AND id = 555;
 ```
@@ -112,7 +121,6 @@ L’opérateur LIKE est utilisé dans la clause WHERE des requêtes SQL. Ce mot-
 ```sql
 SELECT * FROM promos WHERE name LIKE 'P%';
 ```
-
 
 # E03 - async await promise
 
@@ -129,6 +137,7 @@ getData(function(result) {
     });
 });
 ```
+
 Ce type de code devient vite illisible et difficile à gérer.
 
 # Les Promises et leur fonctionnement
@@ -143,14 +152,14 @@ getData()
     .catch(error => console.error("Erreur :", error));
 ```
 
-Avec les Promises, le code est plus linéaire et évite l'imbrication excessive. 
+Avec les Promises, le code est plus linéaire et évite l'imbrication excessive.
 Elles sont également la base de `async/await`, qui permet encore plus de clarté et de simplicité.
 
 lien de la doc : [lien](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 # E04
 
-## DataMappers 
+## DataMappers
 
 Article qui en parle plutôt bien : [lien](https://4markdown.com/understanding-repository-pattern-in-nodejs-and-typescript/)
 

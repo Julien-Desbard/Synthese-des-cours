@@ -5,11 +5,12 @@
 2- créer un fichier router.js
 
 3- importer express
+
 ```js
 import express from "express";
 ```
 
-4- déclarer la const router 
+4- déclarer la const router
 
 ```js
 const router = express.Router();
@@ -42,6 +43,7 @@ app.use(router);
 import { games } from "../games.js";
 import 
 ```
+
 ## Exemple de router
 
 ```js
@@ -70,15 +72,15 @@ router.post("/suggestion", (req, res) => { // comme le formulaire est en method 
     res.send("form envoyé"); //elle prend la main et renvoie l'utilisateur sur "form envoyé"
 })
 ```
+
 POur utiliser la donnée saisie dans le formualire, on doit utiliser un middleware pour l'interprêter.
+
 ```js
 app.use(express.urlencoded({extended: true})) // rend la donnée disponible partout dans le code, via req.body
 ```
 
 Je peux aussi rediriger vers la page d'accueil
+
 ```js
 res.redirect("/") // renvoie sur la page d'accueil
 ```
-
-
-

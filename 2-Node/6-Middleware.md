@@ -1,9 +1,9 @@
 # Explication
 
-
 ## Usage
 
-Les middleware peuvent être rangés dans un dossier Middleware et appelés comme des fonctions rangées dans des modules: 
+Les middleware peuvent être rangés dans un dossier Middleware et appelés comme des fonctions rangées dans des modules:
+
 ```js
 import {localGamesMiddleware } from "./middlewares/localsGamesMiddleware.js";
 app.use(localGamesMiddleware);
@@ -11,7 +11,8 @@ app.use(localGamesMiddleware);
 
 ### next()
 
-Si on veut enchainer les middleware, il faut indiuer que le middleware en cours doit passer à la suivante : 
+Si on veut enchainer les middleware, il faut indiuer que le middleware en cours doit passer à la suivante :
+
 ```js
 app.use((req, res, next) => {
     request ++;
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
     next();
 })
 ```
+
 en l'absence de `next()`, vu que le middlewre n'envoie pas de réponse, le navigateur serait en boucle infinie
 
 #### locals
@@ -32,11 +34,14 @@ app.use((req,res, next) => {
     next();
 })
 ```
-la variable ainsi envoyée n'est plus disponible simplement en l'appelant : 
+
+la variable ainsi envoyée n'est plus disponible simplement en l'appelant :
+
 ```js
  games // à changer par : 
  
  ```
+
 ##### middleware de type logger
 
 ```js
