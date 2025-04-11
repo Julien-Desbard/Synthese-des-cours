@@ -13,6 +13,6 @@
 
 ## Récupérer des branches d'un repo
 
-`git fecth --all`
+`git fetch --all`
 `git checkout nomDeLaBranch`
 utile pour le projet d'une semaine en S09 avec les corrections O'Clock mises à dispo chaque jour
