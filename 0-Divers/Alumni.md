@@ -1,19 +1,18 @@
 # les bons
 
-- Laurent
+- Laurent Ricoeur
 - Valentin Vinel
-- Marco
+- Marco Gebhart
 - Nicolas Sinault
-- Gabriel 
+- Gabriel Amand
 
 ## les moyens
 
-- Sylvain
+- Sylvain Doiteau
 - Johan
 - Nicolas Dorwald
 - Joshua
 - Mohamed
-- Melissa ?
 - Mathieu ?
 - Lenaig ?
 - Pauline ?
@@ -24,6 +23,7 @@
 - Canap
 - Judith
 - Tamara
+- Melissa ?
 
 ### Inconnu
 
