@@ -16,6 +16,9 @@ npm install ejs express dotenv pg express-session
 "type": "module", // dans le fichier json :
 "scripts": { //dans les scripts
 "dev": "node --watch index.js" //==> app.js  représente le nom du fichier du server à lancer
+"db:create": "psql -U tiramisu_oquiz -f ./data/create_tables.sql", // ici tiramisu_oquizz est le nom de la BDD mais aussi du user qui est admin dessus ==> Mettre le même nom pour les deux sinon le script ne fonctionne pas
+"db:seed": "psql -U tiramisu_oquiz -f ./data/seed_tables.sql",
+"db:reset": "npm run db:create && npm run db:seed"
 }
 ```
 Se lance avec la cmd : `npm run dev`

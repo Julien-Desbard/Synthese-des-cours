@@ -19,7 +19,8 @@ Cardinalités : `https://www.base-de-donnees.com/cardinalites/`
 - Formalisation logique de la base de données
 - Inclut le nom des champs effectifs, les clefs primaires et étrangères...
 - les flèches entre les tables partent de la table qui contient un clef etrangère, vers la table dont provient cette clef etrangère
-- reègles : nom des tables, nom desd champs et clefs (primaire) et contraintes (clef étrangère, NOT NULL)
+- règles : on doit retrouver au minimum dans un MLD le nom des tables, le nom des champs, les clefs (primaire) et les contraintes (clef étrangère, NOT NULL)
+- une clef etrangère est identifiée via un #
 
 Recap o'clock : `https://kourou.oclock.io/ressources/fiche-recap/mcd-modele-conceptuel-de-donnees/`
 

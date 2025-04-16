@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import 'dotenv/config' //importe le fichier .env
 import path from "node:path";
 import express from "express";
 import session from "express-session";
