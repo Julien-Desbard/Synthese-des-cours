@@ -1,11 +1,8 @@
-import { pgPool } from "../config/pgPool.js";
+import { pgPool } from "../../config/pgPool.js"; // TODo a remplacer si on utilise Sequelize
 
 export const findById = async (id) => {
-    // TODO voir exemples de syntaxe pour raccourcir tout ça
     try {
-
-  
-        // ici je décompose l'objet result pour récupérer la valeur de rows et je décompose le tableau pour récupérer l'index 0 et mettre le tout dans la variable promo
+         // ici je décompose l'objet result pour récupérer la valeur de rows et je décompose le tableau pour récupérer l'index 0 et mettre le tout dans la variable promo
         const {rows : [ promo ]} = await pgPool.query(`SELECT * FROM promos where id = $1 LIMIT 1`, [
             id
         ]);

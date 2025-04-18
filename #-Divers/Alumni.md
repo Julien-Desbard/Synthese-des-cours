@@ -19,7 +19,8 @@ todo : idenfier leurs qualités
 - Johan
 - Nicolas Dorwald
 - Joshua
-- Mohamed
+- Mohamed Sadoune
+  - Semble fort en SQL
 - Mathieu ?
 - Lenaig ?
 - Pauline ?
@@ -30,7 +31,7 @@ todo : idenfier leurs qualités
 - Canap
 - Judith
 - Tamara
-- Melissa ?
+- Melissa
 
 ### Inconnu
 

@@ -1,3 +1,4 @@
+-- Méthodo via pgpool--
 
 
 DROP TABLE IF EXISTS "cafe";

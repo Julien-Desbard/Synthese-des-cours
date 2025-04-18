@@ -55,3 +55,9 @@ const dataMapper = {
     },
 }
 ```
+
+### Middleware d'erreur
+
+se déclare plutôt dans l'index, après le middleware des routes
+
+

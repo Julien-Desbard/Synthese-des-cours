@@ -47,3 +47,22 @@ Comme pour le setter certains accès à une propriété necessitent d'être cadr
 
 Une propriété privé rend la propriété innaccessible en lecture et en écriture en dehors de la classe
 Souvent obligatoire quand on fait un setter, sinon le setter s'appelle de manière récursive
+
+##### Active record
+
+C'est un design pattern qui consiste à intégrer dans les models les fonctions qui permettent de gérer l'ajout la modification la suppression et la modification en bdd 
+on aura donc dans nos classes : 
+- les propriétés en lien avec le mld
+- les méthodes pour accéder à la bdd
+contrairement au data mapper ou les models seront composés uniquement des propriétés et des methodes associés et la partie bdd sera dans une classe à part datamapper - entityManager ou peu importe comment vous l'appellez.
+
+###### Static
+
+Par moment il peut être utile d'avoir une propriété ou une méthode associé à la classe et non à l'objet enfant de celle ci, le mot clé static permet de réaliser ça. (voir findAll par exemple sur nos models v2)
+
+###### Rappel sql -> injection sql
+
+Toutes variables mise dans une requête sql doit être considéré comme néfaste, le moyen de vérifier ces variables -> requête préparé avec paramètre. exemple de code ci-dessous avec pg
+```js
+await pgPool.query("SELECT * FROM difficulty WHERE id = $1", [id]);
+```

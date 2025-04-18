@@ -1,19 +1,19 @@
-import 'dotenv/config' //importe le fichier .env
-import path from "node:path";
-import express from "express";
-import session from "express-session";
+import 'dotenv/config.js' //importe le fichier .env et strock dans process.env son contenu
+import path from "node:path"; // pour gérer 
+import express from "express"; // pour gérer les templates (partials, views...)
+import session from "express-session"; // pour gérer la session
 import { router } from "./app/routers/router.js";
-import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-//const port = 3001; remplacé par l'installation de dotenv
+
 app.set("view engine", "ejs");
 // maintenant qu'on a un dossier app, il faut préciser que notre dossier views est dedans et plus à la racine
 // path.join + import.meta.dirname = methode la plus clean pour faire un chemin absolu dans notre projet
 app.set("views", path.join(import.meta.dirname, "app", "views"));
 
 app.use(express.static(path.join(import.meta.dirname, "public")));
+
 // j'active le middleware pour pouvoir utiliser les formulaires en post
 app.use(express.urlencoded({ extended: true }));
 
